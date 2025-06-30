@@ -2,13 +2,13 @@ require('dotenv').config();
 // Import the Slack WebClient from @slack/web-api
 const { WebClient } = require('@slack/web-api');
 
-// Your Slack bot token (replace with your actual token or use environment variable for security)
+// Slack bot token (replace with actual token or use environment variable for security)
 const token = process.env.SLACK_BOT_TOKEN;
 
 // Initialize Slack WebClient
 const web = new WebClient(token);
 
-// The channel to use (replace with your sandbox channel if needed)
+// The channel to use (replace with sandbox channel if needed)
 const channel = 'C093LN7630W';
 
 (async () => {
@@ -61,8 +61,3 @@ const channel = 'C093LN7630W';
     console.error('Slack API error:', error.data || error.message || error);
   }
 })();
-
-// To run this script:
-// 1. Install @slack/web-api: npm install @slack/web-api
-// 2. Set your SLACK_BOT_TOKEN environment variable or replace the token string above
-// 3. Run: node slack_sandbox.js 
